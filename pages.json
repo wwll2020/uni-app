@@ -20,14 +20,17 @@
       "enablePullDownRefresh": false
     }
 
-  }, {
-    "path": "pages/my/my",
-    "style": {
-      "navigationBarTitleText": "",
-      "enablePullDownRefresh": false
-    }
-
-  }],
+  }, 
+  {
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
   "subPackages": [{
       "root": "subpkg",
       "pages": [{
@@ -41,6 +44,15 @@
                 }
                 ,{
                     "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "search/search",
                     "style" :                                                                                    
                 {
                     "navigationBarTitleText": "",

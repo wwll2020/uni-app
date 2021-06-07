@@ -1,5 +1,7 @@
 <template>
   <view>
+    <!-- 使用自定义的搜索组件 -->
+    <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧的滚动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{ height: wh + 'px' }">
@@ -46,7 +48,7 @@ export default {
     // 获取当前系统的信息
     const sysInfo = uni.getSystemInfoSync();
     // console.log(sysInfo)
-    this.wh = sysInfo.windowHeight;
+    this.wh = sysInfo.windowHeight-50;
     this.getCateList();
   },
   methods: {
@@ -73,7 +75,12 @@ export default {
       uni.navigateTo({
         url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id 
         })
-    }
+    },
+    gotoSearch(){
+      uni.navigateTo({
+        url: '/subpkg/search/search',
+        })
+    },
   }
 };
 </script>
