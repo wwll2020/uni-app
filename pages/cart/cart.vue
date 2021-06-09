@@ -48,7 +48,8 @@ export default {
             backgroundColor: '#C00000' // 按钮的背景颜色
           }
         }
-      ]
+      ],
+      isClick:false
     };
   },
   computed: {
@@ -69,6 +70,14 @@ export default {
     },
     // 点击了滑动操作按钮
     swipeActionClickHandler(goods) {
+      let that =this;
+      if(that.isClick){
+        return;
+      }
+      that.isClick = true;
+      setTimeout(function(){
+        that.isClick = false;
+      },500)
       this.removeGoodsById(goods.goods_id);
     }
   }
